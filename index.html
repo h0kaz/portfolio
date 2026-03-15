@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased bg-dark text-primary selection:bg-accent selection:text-dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Hegazi | UX & CRO Specialist</title>
+    
+    <!-- Optimized Font Loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    </noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#0B0B0B',
+                        darker: '#111111',
+                        card: '#1A1A1A',
+                        border: '#2A2A2A',
+                        primary: '#EAEAEA',
+                        secondary: '#9CA3AF',
+                        accent: '#01E863'
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+<body class="font-sans bg-dark text-primary selection:bg-accent selection:text-dark">
+
+    <div class="fixed top-0 left-1/4 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[60px] pointer-events-none -translate-y-1/2 transform-gpu"></div>
+    <div class="fixed bottom-0 right-1/4 w-[600px] h-[600px] bg-accent/5 rounded-full blur-[60px] pointer-events-none translate-y-1/2 transform-gpu"></div>
+
+    <nav class="fixed top-0 w-full z-50 glass-card border-x-0 border-t-0 border-b border-border/50 transform-gpu">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center shrink-0">
+                <img src="icons/logo.svg" alt="Mohamed Hegazi Logo" width="160" height="32" loading="eager" fetchpriority="high" decoding="async" class="h-8 w-auto object-contain">
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-secondary">
+                <a href="#about" class="hover:text-primary transition-colors">About</a>
+                <a href="#expertise" class="hover:text-primary transition-colors">Expertise</a>
+                <a href="#work" class="hover:text-primary transition-colors">Work</a>
+            </div>
+            <button class="magnetic-btn px-5 py-2.5 rounded-full border border-border text-sm font-medium hover:bg-white/5 transition-colors duration-300 open-contact-btn shrink-0">
+                Let's Talk
+            </button>
+        </div>
+    </nav>
+
+    <section id="hero" class="relative min-h-screen flex items-center pt-28 lg:pt-32 overflow-hidden transform-gpu">
+        <div class="absolute inset-0 bg-grid z-0"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 relative z-10 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+                
+                <!-- Left Content -->
+                <div class="lg:col-span-7 relative z-10">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-accent/30 bg-accent/5 text-accent text-xs font-medium mb-6 backdrop-blur-sm slide-up">
+                        <span class="relative flex h-2 w-2">
+                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
+                          <span class="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
+                        </span>
+                        Available for new opportunities
+                    </div>
+                    
+                    <h1 class="font-display text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight mb-8 slide-up" style="animation-delay: 0.1s;">
+                        UX/UI Designer &amp; <br class="hidden sm:block" />
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Conversion Rate Optimization</span> <br />
+                        <span class="text-accent text-glow">Specialist.</span>
+                    </h1>
+                    
+                    <p class="text-lg md:text-xl text-secondary max-w-2xl mb-10 leading-relaxed slide-up" style="animation-delay: 0.2s;">
+                        I design high-converting digital experiences by combining UX design, marketing psychology, and conversion optimization.
+                    </p>
+                    
+                    <div class="flex flex-wrap items-center gap-4 slide-up" style="animation-delay: 0.3s;">
+                        <div class="magnetic-wrap">
+                            <a href="#work" class="magnetic-btn group relative inline-flex items-center justify-center px-8 py-4 bg-accent text-dark font-semibold rounded-full overflow-hidden transition-transform">
+                                <span class="relative z-10 flex items-center gap-2">
+                                    View Work
+                                    <svg class="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                                </span>
+                                <div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out"></div>
+                            </a>
+                        </div>
+                        <div class="magnetic-wrap">
+                            <button class="magnetic-btn inline-flex items-center justify-center px-8 py-4 border border-border text-primary font-semibold rounded-full hover:bg-white/5 transition-colors open-contact-btn">
+                                Contact Me
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Content (Profile Image & Animated Elements) -->
+                <div class="lg:col-span-5 relative flex lg:flex justify-center items-center h-[500px] w-full mt-6 sm:mt-8 lg:mt-0 slide-up" style="animation-delay: 0.4s;">
+                    
+                    <div class="relative w-[360px] h-[360px] lg:w-[420px] lg:h-[420px] scale-90 lg:scale-100">
+                        <!-- Reduced soft background blur -->
+                        <div class="absolute inset-0 bg-accent/20 rounded-3xl blur-[60px] opacity-60"></div>
+                        
+                        <!-- Profile Image Glass Card -->
+                        <div class="relative w-full h-full glass-card rounded-[32px] p-2 border border-accent/30 box-glow overflow-hidden z-10">
+                            <!-- Optimized Hero LCP Image -->
+                            <img 
+                                src="assets/hero-image.webp" 
+                                alt="Mohamed Hegazi" 
+                                width="360" 
+                                height="600" 
+                                loading="eager" 
+                                fetchpriority="high" 
+                                decoding="async" 
+                                class="w-full h-full object-cover rounded-[24px]">
+                        </div>
+
+                        <!-- Floating UI Elements: Upgraded CRO Chart -->
+                        <div class="hero-float absolute -top-12 right-[-28px] sm:-top-10 sm:-right-8 lg:-top-16 lg:-right-12 w-56 glass-card rounded-2xl p-5 transform-gpu will-change-transform rotate-6 scale-75 sm:scale-90 lg:scale-100 border border-accent/30 box-glow z-20 backdrop-blur-xl bg-dark/60">
+                            <div class="flex justify-between items-end mb-4">
+                                <div class="text-[10px] text-secondary font-medium uppercase tracking-widest">Conversion</div>
+                                <div class="text-accent font-display font-bold text-xl flex items-center">
+                                    +<span class="hero-counter" data-target="30">0</span>%
+                                </div>
+                            </div>
+                            <div class="flex items-end h-16 gap-2">
+                                <div class="chart-bar w-1/4 bg-white/10 rounded h-1/3 origin-bottom scale-y-0 transform-gpu will-change-transform"></div>
+                                <div class="chart-bar w-1/4 bg-white/10 rounded h-1/2 origin-bottom scale-y-0 transform-gpu will-change-transform"></div>
+                                <div class="chart-bar w-1/4 bg-accent/90 rounded h-full box-glow origin-bottom scale-y-0 transform-gpu will-change-transform"></div>
+                                <div class="chart-bar w-1/4 bg-white/10 rounded h-2/3 origin-bottom scale-y-0 transform-gpu will-change-transform"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Animated Arrow -->
+                        <div class="hero-arrow absolute -bottom-10 -left-10 scale-90 lg:scale-100 transform-gpu will-change-transform z-20 glass-card p-4 rounded-full border border-accent/20">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#01E863" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="drop-shadow-[0_0_15px_rgba(1,232,99,0.5)]">
+                                <line x1="7" y1="17" x2="17" y2="7"></line>
+                                <polyline points="7 7 17 7 17 17"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-scroll absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50 transform-gpu">
+            <span class="text-xs uppercase tracking-widest text-secondary font-medium">Scroll</span>
+            <div class="w-[1px] h-12 bg-gradient-to-b from-secondary to-transparent"></div>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 lg:py-24 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                <div class="lg:col-span-5 relative">
+                    <div class="sticky top-32">
+                        <h2 class="font-display text-4xl md:text-5xl font-bold mb-6 section-title">About Me</h2>
+                        <div class="w-12 h-1 bg-accent mb-8 box-glow"></div>
+                        <div class="glass-card rounded-2xl p-8 border border-border">
+                            <h3 class="text-xl font-medium text-primary mb-2">Mohamed Hegazi</h3>
+                            <p class="text-secondary text-sm leading-relaxed mb-6">
+                                A unique blend of Computer Science logic, UX/UI creativity, and Marketing psychology.
+                            </p>
+                            <div class="space-y-4">
+                                <div class="flex items-center gap-3 text-sm">
+                                    <div class="w-8 h-8 rounded-full bg-darker border border-border flex items-center justify-center text-accent">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                    </div>
+                                    <span class="text-primary">UX & CRO Specialist</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-sm">
+                                    <div class="w-8 h-8 rounded-full bg-darker border border-border flex items-center justify-center text-accent">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                                    </div>
+                                    <span class="text-primary">CS Background</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:col-span-7 space-y-8 text-lg text-secondary leading-relaxed about-text">
+                    <p class="reveal-text">
+                        I am a UX Designer and Conversion Optimization Specialist with a background in <strong class="text-primary">Computer Science</strong>. This foundation allows me to understand complex technical systems and collaborate seamlessly with developers.
+                    </p>
+                    <p class="reveal-text">
+                        My journey began in 2021 as a <strong class="text-primary">Graphic Designer</strong>. Over two years, I developed strong visual design skills, branding knowledge, and an eye for aesthetics while working on various creative projects and marketing visuals.
+                    </p>
+                    <p class="reveal-text">
+                        In early 2024, I transitioned into <strong class="text-primary">Landing Page Design</strong>. Using platforms like LightFunnels and EasyOrders, I built high-converting pages. Working closely with marketing teams immersed me in Conversion Rate Optimization and Media Buying strategies, teaching me to design for <strong class="text-accent">performance and sales</strong>, not just looks.
+                    </p>
+                    <p class="reveal-text">
+                        By 2025, I expanded my expertise into full <strong class="text-primary">UX/UI Design</strong>. I now combine design thinking, user behavior analysis, and marketing insights to create holistic digital products.
+                    </p>
+                    <div class="p-6 mt-8 border-l-2 border-accent bg-accent/5 rounded-r-xl reveal-text">
+                        <p class="text-primary font-medium mb-2">My current focus is designing digital products that combine:</p>
+                        <ul class="grid grid-cols-2 gap-3 text-sm mt-4">
+                            <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-accent rounded-full"></div> UX Design</li>
+                            <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-accent rounded-full"></div> Conversion Optimization</li>
+                            <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-accent rounded-full"></div> Marketing Psychology</li>
+                            <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-accent rounded-full"></div> E-commerce Strategy</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="expertise" class="py-16 lg:py-24 bg-darker relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 section-header">
+                <h2 class="font-display text-4xl md:text-5xl font-bold mb-4 text-primary">Core Expertise</h2>
+                <p class="text-secondary max-w-2xl mx-auto">Bridging the gap between aesthetic design and measurable business growth.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="spotlight-card glass-card p-8 rounded-2xl border border-border hover:border-accent/50 transition-colors duration-500 skill-card">
+                    <div class="w-12 h-12 bg-dark rounded-xl border border-border flex items-center justify-center text-accent mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">UX/UI Design</h3>
+                    <p class="text-secondary text-sm">Crafting intuitive, user-centric interfaces rooted in research and interaction design principles.</p>
+                </div>
+
+                <div class="spotlight-card glass-card p-8 rounded-2xl border border-border hover:border-accent/50 transition-colors duration-500 skill-card">
+                    <div class="w-12 h-12 bg-dark rounded-xl border border-border flex items-center justify-center text-accent mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Conversion Optimization</h3>
+                    <p class="text-secondary text-sm">Applying data, A/B testing mindset, and sales-focused UX to maximize conversion rates.</p>
+                </div>
+
+                <div class="spotlight-card glass-card p-8 rounded-2xl border border-border hover:border-accent/50 transition-colors duration-500 skill-card">
+                    <div class="w-12 h-12 bg-dark rounded-xl border border-border flex items-center justify-center text-accent mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Marketing Psychology</h3>
+                    <p class="text-secondary text-sm">Understanding user behavior and leveraging psychological triggers to guide user actions effectively.</p>
+                </div>
+
+                <div class="spotlight-card glass-card p-8 rounded-2xl border border-border hover:border-accent/50 transition-colors duration-500 skill-card">
+                    <div class="w-12 h-12 bg-dark rounded-xl border border-border flex items-center justify-center text-accent mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Landing Page Design</h3>
+                    <p class="text-secondary text-sm">Designing high-performance, fast-loading pages optimized for ad traffic and lead generation.</p>
+                </div>
+
+                <div class="spotlight-card glass-card p-8 rounded-2xl border border-border hover:border-accent/50 transition-colors duration-500 skill-card">
+                    <div class="w-12 h-12 bg-dark rounded-xl border border-border flex items-center justify-center text-accent mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Ecommerce UX</h3>
+                    <p class="text-secondary text-sm">Streamlining the shopping experience, specifically Shopify store optimization, to reduce friction and abandoned carts.</p>
+                </div>
+
+                <div class="spotlight-card glass-card p-8 rounded-2xl border border-border hover:border-accent/50 transition-colors duration-500 skill-card">
+                    <div class="w-12 h-12 bg-dark rounded-xl border border-border flex items-center justify-center text-accent mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">User Research</h3>
+                    <p class="text-secondary text-sm">Conducting quantitative and qualitative analysis to base design decisions on actual user needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tools" class="py-16 lg:py-24 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 section-header">
+                <h2 class="font-display text-4xl md:text-5xl font-bold mb-4 text-primary">Tools & Technologies</h2>
+                <p class="text-secondary max-w-2xl mx-auto">The digital stack I use to research, design, and optimize.</p>
+            </div>
+            
+            <div class="flex overflow-x-auto gap-4 md:gap-6 pb-8 snap-x hide-scrollbar px-6 -mx-6 md:px-0 md:mx-0 md:flex-wrap md:justify-center">
+                
+                <div class="spotlight-card glass-card px-5 py-2.5 rounded-full border border-border hover:border-accent/50 transition-colors duration-500 tool-card flex items-center gap-3 shrink-0 snap-start">
+                    <div class="w-8 h-8 shrink-0 bg-dark/80 rounded-full border border-border flex items-center justify-center text-accent">
+                        <img src="icons/figma.svg" alt="Figma" width="16" height="16" loading="lazy" decoding="async" class="object-contain">
+                    </div>
+                    <span class="text-primary font-medium text-sm pr-2">Figma</span>
+                </div>
+
+                <div class="spotlight-card glass-card px-5 py-2.5 rounded-full border border-border hover:border-accent/50 transition-colors duration-500 tool-card flex items-center gap-3 shrink-0 snap-start">
+                    <div class="w-8 h-8 shrink-0 bg-dark/80 rounded-full border border-border flex items-center justify-center text-accent">
+                        <img src="icons/photoshop.svg" alt="Photoshop" width="16" height="16" loading="lazy" decoding="async" class="object-contain">
+                    </div>
+                    <span class="text-primary font-medium text-sm pr-2">Photoshop</span>
+                </div>
+
+                <div class="spotlight-card glass-card px-5 py-2.5 rounded-full border border-border hover:border-accent/50 transition-colors duration-500 tool-card flex items-center gap-3 shrink-0 snap-start">
+                    <div class="w-8 h-8 shrink-0 bg-dark/80 rounded-full border border-border flex items-center justify-center text-accent">
+                        <img src="icons/illustrator.svg" alt="Illustrator" width="16" height="16" loading="lazy" decoding="async" class="object-contain">
+                    </div>
+                    <span class="text-primary font-medium text-sm pr-2">Illustrator</span>
+                </div>
+
+                <div class="spotlight-card glass-card px-5 py-2.5 rounded-full border border-border hover:border-accent/50 transition-colors duration-500 tool-card flex items-center gap-3 shrink-0 snap-start">
+                    <div class="w-8 h-8 shrink-0 bg-dark/80 rounded-full border border-border flex items-center justify-center text-accent">
+                        <img src="icons/miro.svg" alt="Miro" width="16" height="16" loading="lazy" decoding="async" class="object-contain">
+                    </div>
+                    <span class="text-primary font-medium text-sm pr-2">Miro</span>
+                </div>
+
+                <div class="spotlight-card glass-card px-5 py-2.5 rounded-full border border-border hover:border-accent/50 transition-colors duration-500 tool-card flex items-center gap-3 shrink-0 snap-start">
+                    <div class="w-8 h-8 shrink-0 bg-dark/80 rounded-full border border-border flex items-center justify-center text-accent">
+                        <img src="icons/notion.svg" alt="Notion" width="16" height="16" loading="lazy" decoding="async" class="object-contain">
+                    </div>
+                    <span class="text-primary font-medium text-sm pr-2">Notion</span>
+                </div>
+
+                <div class="spotlight-card glass-card px-5 py-2.5 rounded-full border border-border hover:border-accent/50 transition-colors duration-500 tool-card flex items-center gap-3 shrink-0 snap-start">
+                    <div class="w-8 h-8 shrink-0 bg-dark/80 rounded-full border border-border flex items-center justify-center text-accent">
+                        <img src="icons/chatgpt.svg" alt="ChatGPT" width="16" height="16" loading="lazy" decoding="async" class="object-contain">
+                    </div>
+                    <span class="text-primary font-medium text-sm pr-2">ChatGPT</span>
+                </div>
+
+                <div class="spotlight-card glass-card px-5 py-2.5 rounded-full border border-border hover:border-accent/50 transition-colors duration-500 tool-card flex items-center gap-3 shrink-0 snap-start">
+                    <div class="w-8 h-8 shrink-0 bg-dark/80 rounded-full border border-border flex items-center justify-center text-accent">
+                        <img src="icons/gemini.svg" alt="Gemini" width="16" height="16" loading="lazy" decoding="async" class="object-contain">
+                    </div>
+                    <span class="text-primary font-medium text-sm pr-2">Gemini</span>
+                </div>
+
+                <div class="spotlight-card glass-card px-5 py-2.5 rounded-full border border-border hover:border-accent/50 transition-colors duration-500 tool-card flex items-center gap-3 shrink-0 snap-start">
+                    <div class="w-8 h-8 shrink-0 bg-dark/80 rounded-full border border-border flex items-center justify-center text-accent">
+                        <img src="icons/cursor.svg" alt="Cursor" width="16" height="16" loading="lazy" decoding="async" class="object-contain">
+                    </div>
+                    <span class="text-primary font-medium text-sm pr-2">Cursor</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="py-16 lg:py-24 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 section-header">
+                <h2 class="font-display text-4xl md:text-5xl font-bold mb-4 text-primary">Certifications & Continuous Learning</h2>
+                <p class="text-secondary max-w-2xl mx-auto">Staying at the forefront of UX design, research, and conversion optimization.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="spotlight-card glass-card p-8 rounded-2xl border border-border hover:border-accent/50 transition-colors duration-500 cert-card group">
+                    <div class="flex flex-col h-full justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-6">
+                                <div class="w-12 h-12 bg-dark rounded-xl border border-border flex items-center justify-center text-accent">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+                                </div>
+                                <span class="text-xs font-medium px-3 py-1 bg-dark rounded-full border border-border text-secondary">June 2025</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-primary mb-2">Master Digital Product Design: UX Research & UI Design</h3>
+                            <p class="text-accent text-sm font-medium mb-4">Udemy</p>
+                            
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-2.5 py-1 rounded bg-white/5 border border-border/50 text-xs text-secondary">Product Design</span>
+                                <span class="px-2.5 py-1 rounded bg-white/5 border border-border/50 text-xs text-secondary">UX Research</span>
+                                <span class="px-2.5 py-1 rounded bg-white/5 border border-border/50 text-xs text-secondary">UI Design</span>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <p class="text-xs text-secondary mb-4">Credential ID: <span class="font-mono text-primary/80">UC-fa4cab2a-cc1f-4bf7-9472-323a8b3715ed</span></p>
+                            <a href="#" target="_blank" class="inline-flex items-center gap-2 text-sm text-primary hover:text-accent transition-colors">
+                                View Credential 
+                                <svg class="w-4 h-4 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spotlight-card glass-card p-8 rounded-2xl border border-border hover:border-accent/50 transition-colors duration-500 cert-card group">
+                    <div class="flex flex-col h-full justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-6">
+                                <div class="w-12 h-12 bg-dark rounded-xl border border-border flex items-center justify-center text-accent">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                                </div>
+                                <span class="text-xs font-medium px-3 py-1 bg-dark rounded-full border border-border text-secondary">March 15, 2026</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-primary mb-2">Advanced UX Course – Digital Product Design</h3>
+                            <p class="text-accent text-sm font-medium mb-4">Instructor: Ayman Taher</p>
+                            
+                            <p class="text-secondary text-sm mb-6 leading-relaxed">
+                                Completed an advanced UX mentoring program focused on designing digital products comprehensively from concept through to launch.
+                            </p>
+                        </div>
+                        
+                        <div>
+                            <button class="inline-flex items-center gap-2 text-sm text-primary hover:text-accent transition-colors open-cert-preview">
+                                View Certificate 
+                                <svg class="w-4 h-4 transform group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Education Section -->
+    <section id="education" class="py-16 lg:py-24 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="font-display text-4xl md:text-5xl font-bold mb-16 text-center text-primary timeline-header">Education</h2>
+            
+            <div class="relative space-y-16">
+                <div class="absolute left-4 md:left-1/2 md:-translate-x-1/2 top-0 bottom-0 w-[2px] bg-border/50"></div>
+                
+                <div class="relative pl-12 md:pl-0 edu-item group">
+                    <div class="absolute left-[-20px] md:left-1/2 md:-translate-x-1/2 top-0 w-10 h-10 glass-card rounded-xl border border-border flex items-center justify-center z-10 overflow-hidden box-glow bg-dark group-hover:border-accent transition-colors duration-300">
+                        <img src="assets/sha-logo.jpg" alt="El Shorouk Academy Logo" width="20" height="20" loading="lazy" decoding="async" class="object-contain">
+                    </div>
+                    <div class="md:w-1/2 md:pr-16 text-left md:text-right md:ml-0">
+                        <span class="text-accent font-display font-bold text-xl mb-1 block">Oct 2021 &ndash; Oct 2025</span>
+                        <span class="text-secondary text-sm font-medium mb-2 block uppercase tracking-wider">El Shorouk Academy</span>
+                        <h3 class="text-2xl font-bold text-primary mb-3">Bachelor of Computer Science - Computer and Information Sciences</h3>
+                        <p class="text-secondary text-sm leading-relaxed mb-4">
+                            Studied computer science fundamentals including programming, systems, and software engineering.
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="volunteering" class="py-16 lg:py-24 bg-darker relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="font-display text-4xl md:text-5xl font-bold mb-16 text-center text-primary timeline-header">Community & Volunteering</h2>
+            
+            <div class="relative space-y-16">
+                <div class="absolute left-4 md:left-1/2 md:-translate-x-1/2 top-0 bottom-0 w-[2px] bg-border/50"></div>
+                
+                <div class="relative pl-12 md:pl-0 timeline-item group">
+                    <div class="absolute left-[-20px] md:left-1/2 md:-translate-x-1/2 top-0 w-10 h-10 glass-card rounded-xl border border-border flex items-center justify-center z-10 overflow-hidden box-glow bg-dark group-hover:border-accent transition-colors duration-300">
+                        <img src="assets/gdsc-logo.png" alt="GDSC Logo" width="20" height="20" loading="lazy" decoding="async" class="object-contain">
+                    </div>
+                    <div class="md:w-1/2 md:pr-16 text-left md:text-right md:ml-0">
+                        <span class="text-accent font-display font-bold text-xl mb-1 block">March 2022 &ndash; July 2022</span>
+                        <span class="text-secondary text-sm font-medium mb-2 block uppercase tracking-wider">Google Developer Student Club - Al Azhar University</span>
+                        <h3 class="text-2xl font-bold text-primary mb-3">Cyber Security Core Team HR Member</h3>
+                        <a href="https://gdsc-cert.web.app/c/DMS76S9VW0VU" target="_blank" class="inline-flex items-center gap-1.5 text-xs text-primary hover:text-accent transition-colors">
+                            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 2l5 5h-5V4zm5 16H6V4h5v6h6v10z"/></svg>
+                            View Certificate
+                        </a>
+                    </div>
+                </div>
+
+                <div class="relative pl-12 md:pl-0 timeline-item group">
+                    <div class="absolute left-[-20px] md:left-1/2 md:-translate-x-1/2 top-0 w-10 h-10 glass-card rounded-xl border border-border flex items-center justify-center z-10 overflow-hidden box-glow bg-dark group-hover:border-accent transition-colors duration-300">
+                        <img src="assets/ieee-logo.jpeg" alt="IEEE Logo" width="20" height="20" loading="lazy" decoding="async" class="object-contain">
+                    </div>
+                    <div class="md:w-1/2 md:pl-16 md:ml-auto text-left">
+                        <span class="text-accent font-display font-bold text-xl mb-1 block">November 2022 &ndash; June 2023</span>
+                        <span class="text-secondary text-sm font-medium mb-2 block uppercase tracking-wider">IEEE El Shorouk Academy</span>
+                        <h3 class="text-2xl font-bold text-primary mb-3">Technical Team Member - Cyber Security Committee</h3>
+                    </div>
+                </div>
+
+                <div class="relative pl-12 md:pl-0 timeline-item group">
+                    <div class="absolute left-[-20px] md:left-1/2 md:-translate-x-1/2 top-0 w-10 h-10 glass-card rounded-xl border border-border flex items-center justify-center z-10 overflow-hidden box-glow bg-dark group-hover:border-accent transition-colors duration-300">
+                        <img src="assets/gdsc-logo.png" alt="GDSC Logo" width="20" height="20" loading="lazy" decoding="async" class="object-contain">
+                    </div>
+                    <div class="md:w-1/2 md:pr-16 text-left md:text-right md:ml-0">
+                        <span class="text-accent font-display font-bold text-xl mb-1 block">August 2022 &ndash; May 2023</span>
+                        <span class="text-secondary text-sm font-medium mb-2 block uppercase tracking-wider">Google Developer Student Club - Al Azhar University</span>
+                        <h3 class="text-2xl font-bold text-primary mb-3">Cyber Security Core Team Member</h3>
+                    </div>
+                </div>
+
+                <div class="relative pl-12 md:pl-0 timeline-item group">
+                    <div class="absolute left-[-20px] md:left-1/2 md:-translate-x-1/2 top-0 w-10 h-10 glass-card rounded-xl border border-border flex items-center justify-center z-10 overflow-hidden box-glow bg-dark group-hover:border-accent transition-colors duration-300">
+                        <img src="assets/gdsc-logo.png" alt="GDSC Logo" width="20" height="20" loading="lazy" decoding="async" class="object-contain">
+                    </div>
+                    <div class="md:w-1/2 md:pl-16 md:ml-auto text-left">
+                        <span class="text-accent font-display font-bold text-xl mb-1 block">October 2023 &ndash; July 2024</span>
+                        <span class="text-secondary text-sm font-medium mb-2 block uppercase tracking-wider">GDSC - El Shorouk Academy</span>
+                        <h3 class="text-2xl font-bold text-primary mb-3">Vice Head - Cyber Security Team</h3>
+                        <p class="text-secondary text-sm leading-relaxed mb-3">
+                            Conducted a cybersecurity session introducing the fundamentals of penetration testing.
+                        </p>
+                        <ul class="text-sm text-secondary space-y-1 mt-2 inline-block text-left">
+                            <li class="flex items-center gap-2"><div class="w-1 h-1 bg-accent rounded-full"></div> Reconnaissance techniques</li>
+                            <li class="flex items-center gap-2"><div class="w-1 h-1 bg-accent rounded-full"></div> Vulnerability discovery</li>
+                            <li class="flex items-center gap-2"><div class="w-1 h-1 bg-accent rounded-full"></div> Privilege escalation</li>
+                            <li class="flex items-center gap-2"><div class="w-1 h-1 bg-accent rounded-full"></div> Hands-on practical exercises</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 lg:py-24 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="font-display text-4xl md:text-5xl font-bold mb-16 text-center text-primary timeline-header">Career Evolution</h2>
+            
+            <div class="relative space-y-16">
+                <div class="absolute left-4 md:left-1/2 md:-translate-x-1/2 top-0 bottom-0 w-[2px] bg-border/50"></div>
+                <div class="relative pl-10 md:pl-0 timeline-item group">
+                    <div class="absolute left-[-9px] md:left-1/2 md:-translate-x-1/2 top-1 w-4 h-4 bg-dark border-2 border-accent rounded-full box-glow transition-transform duration-300 group-hover:scale-150 z-10"></div>
+                    <div class="md:w-1/2 md:pr-16 text-left md:text-right md:ml-0">
+                        <span class="text-accent font-display font-bold text-xl mb-2 block">2021 &ndash; 2023</span>
+                        <h3 class="text-2xl font-bold text-primary mb-2">Freelance Graphic Designer</h3>
+                        <p class="text-secondary text-sm leading-relaxed mb-4">
+                            Completed more than 300 design projects including social media graphics, advertising creatives, and printed materials, building a strong visual foundation.
+                        </p>
+                        <a href="https://www.behance.net/gallery/209070111/Mohamed-Hegazi-Portfolio" target="_blank" class="inline-flex items-center gap-1.5 text-xs text-primary hover:text-accent transition-colors">
+                            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14h-8.027c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-2.804c-.035-1.684-1.523-2.181-2.456-2.181-1.229 0-2.222.617-2.43 2.181h4.886zm-8.498 5.804c-1.895 0-3.513-.935-3.513-3.535 0-2.864 1.954-3.322 2.87-3.415-1.011-.193-2.416-.893-2.416-2.923 0-2.31 1.93-2.878 3.328-3.003-1.049-.244-1.716-1.127-1.716-2.35 0-1.893 1.583-2.778 3.518-2.778h6.463v17.5l-4.22-.008-4.314.012zm2.146-5.352c1.787 0 2.502 1.144 2.502 2.38 0 1.258-.87 2.336-2.399 2.336-1.765 0-2.605-1.181-2.605-2.443 0-1.272.936-2.273 2.502-2.273zm.149-5.184c1.472 0 2.152.924 2.152 2.028 0 1.059-.766 1.957-2.203 1.957-1.404 0-2.204-.928-2.204-1.957 0-1.114.735-2.028 2.255-2.028z"/></svg>
+                            View Portfolio
+                        </a>
+                    </div>
+                </div>
+
+                <div class="relative pl-10 md:pl-0 timeline-item group">
+                    <div class="absolute left-[-9px] md:left-1/2 md:-translate-x-1/2 top-1 w-4 h-4 bg-dark border-2 border-accent rounded-full box-glow transition-transform duration-300 group-hover:scale-150 z-10"></div>
+                    <div class="md:w-1/2 md:pl-16 md:ml-auto text-left">
+                        <span class="text-accent font-display font-bold text-xl mb-2 block">2023 &ndash; 2025</span>
+                        <h3 class="text-2xl font-bold text-primary mb-2">Freelance Landing Page Designer & Store Builder</h3>
+                        <p class="text-secondary text-sm leading-relaxed mb-3">
+                            Designed high-converting landing pages and e-commerce stores using EasyOrders and Shopify.
+                        </p>
+                        <ul class="text-sm text-secondary space-y-1 mt-2">
+                            <li class="flex items-center gap-2"><div class="w-1 h-1 bg-accent rounded-full"></div> Conversion optimization</li>
+                            <li class="flex items-center gap-2"><div class="w-1 h-1 bg-accent rounded-full"></div> Landing page performance</li>
+                            <li class="flex items-center gap-2"><div class="w-1 h-1 bg-accent rounded-full"></div> Sales-driven UX design</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="relative pl-10 md:pl-0 timeline-item group">
+                    <div class="absolute left-[-9px] md:left-1/2 md:-translate-x-1/2 top-1 w-4 h-4 bg-accent rounded-full box-glow transition-transform duration-300 group-hover:scale-150 z-10">
+                        <div class="absolute inset-0 bg-accent rounded-full animate-ping opacity-50"></div>
+                    </div>
+                    <div class="md:w-1/2 md:pr-16 text-left md:text-right md:ml-0">
+                        <span class="text-accent font-display font-bold text-xl mb-2 block">June 2025 &ndash; Feb 2026</span>
+                        <h3 class="text-2xl font-bold text-primary mb-2">UX/UI Designer at DEADX</h3>
+                        <p class="text-secondary text-sm leading-relaxed mb-3">
+                            Designed landing pages, marketing websites, and an EdTech platform interface, concluding upon completion of the product project lifecycle.
+                        </p>
+                        <ul class="text-sm text-secondary space-y-1 mt-2 inline-block text-left">
+                            <li class="flex items-center gap-2"><div class="w-1 h-1 bg-accent rounded-full"></div> UX research & User flow optimization</li>
+                            <li class="flex items-center gap-2"><div class="w-1 h-1 bg-accent rounded-full"></div> Interface design & Product experiences</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 lg:py-20 bg-darker border-y border-border relative overflow-hidden">
+        <div class="absolute inset-0 bg-accent/5 opacity-50 bg-grid pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                <div class="stat-card">
+                    <div class="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-2 flex justify-center items-center">
+                        <span class="text-accent">+</span><span class="counter" data-target="30">0</span><span>%</span>
+                    </div>
+                    <div class="text-secondary text-xs md:text-sm uppercase tracking-wider font-medium">Conversion Rate Achieved</div>
+                </div>
+                <div class="stat-card">
+                    <div class="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-2 flex justify-center items-center">
+                        <span class="counter" data-target="499">0</span><span class="text-accent">+</span>
+                    </div>
+                    <div class="text-secondary text-xs md:text-sm uppercase tracking-wider font-medium">Landing Pages Designed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-2 flex justify-center items-center">
+                        <span class="counter" data-target="30">0</span><span class="text-accent">+</span>
+                    </div>
+                    <div class="text-secondary text-xs md:text-sm uppercase tracking-wider font-medium">E-commerce Stores Built</div>
+                </div>
+                <div class="stat-card">
+                    <div class="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-2 flex justify-center items-center">
+                        <span class="counter" data-target="300">0</span><span class="text-accent">+</span>
+                    </div>
+                    <div class="text-secondary text-xs md:text-sm uppercase tracking-wider font-medium">Graphic Designs Delivered</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="work" class="bg-dark relative py-24">
+        <div class="absolute inset-0 bg-grid opacity-10 pointer-events-none z-0"></div>
+        <div class="relative z-10 max-w-[1100px] mx-auto px-6">
+            <h2 class="font-display text-4xl md:text-5xl font-bold mb-14 text-primary">Selected Works</h2>
+
+            <div class="flex flex-col gap-12 md:gap-16 mt-16 md:mt-10">
+                <!-- PROJECT CARD START: Mawgif Parking App -->
+                <article class="project-card rounded-2xl border border-border/50 bg-card p-8 md:p-10 transition duration-300 hover:border-accent/40">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 lg:gap-12 items-center">
+                        <div class="order-2 lg:order-1">
+                            <h3 class="text-3xl font-bold text-primary mb-4">Mawgif Parking App</h3>
+                            <p class="text-secondary text-sm leading-relaxed max-w-md mb-6">UX Audit & Product Redesign Case Study for a smoother and faster parking discovery experience.</p>
+                            <div class="space-y-5 md:space-y-6 mb-6">
+                                <div>
+                                    <strong class="text-primary text-sm block mb-1">Problem</strong>
+                                    <p class="text-secondary text-sm leading-relaxed">Drivers often struggle to find available parking spaces in crowded areas. The original experience lacked clear navigation and efficient search flow.</p>
+                                </div>
+                                <div>
+                                    <strong class="text-primary text-sm block mb-1">UX Approach</strong>
+                                    <p class="text-secondary text-sm leading-relaxed">Conducted a UX audit, then redesigned information architecture and key screens to simplify discovery and reservation.</p>
+                                </div>
+                                <div>
+                                    <strong class="text-accent text-sm block mb-1">Outcome</strong>
+                                    <p class="text-primary text-sm font-medium leading-relaxed">A clearer user journey and improved interface hierarchy that makes booking parking faster and more intuitive.</p>
+                                </div>
+                            </div>
+                            <a href="https://www.behance.net/gallery/245284631/Mawgif-Parking-App-UX-Audit-Redesign-Case-Study" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-accent hover:text-primary transition-colors">
+                                <i class="fa-brands fa-behance"></i>
+                                View Case Study
+                            </a>
+                        </div>
+
+                        <div class="order-1 lg:order-2">
+                            <div class="relative rounded-xl overflow-hidden border border-border/50">
+                                <img
+                                    src="assets/mawgif-app.png"
+                                    alt="Mawgif Parking App preview"
+                                    width="800"
+                                    height="450"
+                                    loading="lazy"
+                                    decoding="async"
+                                    class="w-full max-w-none aspect-[4/3] md:aspect-[3/2] object-cover"
+                                >
+                                <div class="absolute bottom-4 left-4 z-20 hidden md:flex gap-2 flex-wrap">
+                                    <span class="px-3 py-1 text-xs rounded-full bg-dark border border-border text-secondary">UX Research</span>
+                                    <span class="px-3 py-1 text-xs rounded-full bg-dark border border-border text-secondary">UX Audit</span>
+                                    <span class="px-3 py-1 text-xs rounded-full bg-dark border border-border text-secondary">Mobile App</span>
+                                    <span class="px-3 py-1 text-xs rounded-full bg-dark border border-border text-secondary">Product Design</span>
+                                    <span class="px-3 py-1 text-xs rounded-full bg-dark border border-border text-secondary">UI Design</span>
+                                </div>
+                            </div>
+                            <div class="flex md:hidden mt-4 gap-2 flex-wrap">
+                                <span class="px-3 py-1 text-xs rounded-full bg-dark border border-border text-secondary">UX Research</span>
+                                <span class="px-3 py-1 text-xs rounded-full bg-dark border border-border text-secondary">UX Audit</span>
+                                <span class="px-3 py-1 text-xs rounded-full bg-dark border border-border text-secondary">Mobile App</span>
+                                <span class="px-3 py-1 text-xs rounded-full bg-dark border border-border text-secondary">Product Design</span>
+                                <span class="px-3 py-1 text-xs rounded-full bg-dark border border-border text-secondary">UI Design</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <!-- PROJECT CARD END: Mawgif Parking App -->
+<!-- PROJECT CARD START: SASTify Landing Page -->
+<article class="project-card rounded-2xl border border-border/50 bg-card p-8 md:p-10 transition duration-300 hover:border-accent/40">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 lg:gap-12 items-center">
+      <div class="order-2 lg:order-1">
+          <h3 class="text-3xl font-bold text-primary mb-4">SASTify Landing Page</h3>
+          <p class="text-secondary text-sm leading-relaxed max-w-md mb-6">
+              Modern glassmorphism landing page designed for a next-generation static application security testing platform.
+          </p>
+
+          <div class="space-y-5 md:space-y-6 mb-6">
+              <div>
+                  <strong class="text-primary text-sm block mb-1">Problem</strong>
+                  <p class="text-secondary text-sm leading-relaxed">
+                      Many developer-focused security platforms struggle to communicate complex technical value clearly, often resulting in confusing onboarding and low engagement.
+                  </p>
+              </div>
+
+              <div>
+                  <strong class="text-primary text-sm block mb-1">UX Approach</strong>
+                  <p class="text-secondary text-sm leading-relaxed">
+                      Designed a modern glass-style landing page focused on clarity, trust, and visual hierarchy. Simplified the information flow and emphasized product credibility, features, and developer trust signals.
+                  </p>
+              </div>
+
+              <div>
+                  <strong class="text-accent text-sm block mb-1">Outcome</strong>
+                  <p class="text-primary text-sm font-medium leading-relaxed">
+                      A visually engaging product landing experience that clearly communicates security value and improves developer engagement.
+                  </p>
+              </div>
+          </div>
+
+          <a href="https://www.behance.net/gallery/240030755/SASTify-A-Glassy-Next-Gen-Landing-Page-Design"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="inline-flex items-center gap-2 text-sm text-accent hover:text-primary transition-colors">
+              <i class="fa-brands fa-behance"></i>
+              View Case Study
+          </a>
+      </div>
+
+      <div class="order-1 lg:order-2">
+          <div class="relative rounded-xl overflow-hidden border border-border/50">
+              <img
+                   src="assets/sastify-lp.png"
+                   alt="SASTify landing page preview"
+                   width="800"
+                   height="450"
+                   loading="lazy"
+                   decoding="async"
+                   class="w-full max-w-none aspect-[4/3] md:aspect-[3/2] object-cover"
+              >
+
+              <div class="absolute bottom-4 left-4 z-20 hidden md:flex gap-2 flex-wrap">
+                  <span class="px-3 py-1 text-xs rounded-full bg-dark border border-border text-secondary">Landing Page Design</span>
+                  <span class="px-3 py-1 text-xs rounded-full bg-dark border border-border text-secondary">UI Design</span>
+                  <span class="px-3 py-1 text-xs rounded-full bg-dark border border-border text-secondary">Glassmorphism</span>
+              </div>
+          </div>
+
+          <div class="flex md:hidden mt-4 gap-2 flex-wrap">
+              <span class="px-3 py-1 text-xs rounded-full bg-dark border border-border text-secondary">Landing Page Design</span>
+              <span class="px-3 py-1 text-xs rounded-full bg-dark border border-border text-secondary">UI Design</span>
+              <span class="px-3 py-1 text-xs rounded-full bg-dark border border-border text-secondary">Glassmorphism</span>
+          </div>
+      </div>
+  </div>
+</article>
+<!-- PROJECT CARD END: SASTify Landing Page -->
+
+<!-- PROJECT CARD START: Digitopia 2025 Graduation Project -->
+<article class="project-card rounded-2xl border border-border/50 bg-card p-8 md:p-10 transition duration-300 hover:border-accent/40">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 lg:gap-12 items-center">
+
+      <div class="order-2 lg:order-1">
+          <h3 class="text-3xl font-bold text-primary mb-4">Digitopia 2025 – Graduation Project</h3>
+
+          <p class="text-secondary text-sm leading-relaxed max-w-md mb-6">
+              Graduation project product experience where I led the UX/UI design, branding, and overall visual system, resulting in national recognition.
+          </p>
+
+          <div class="space-y-5 md:space-y-6 mb-6">
+
+              <div>
+                  <strong class="text-primary text-sm block mb-1">Problem</strong>
+                  <p class="text-secondary text-sm leading-relaxed">
+                      The project required designing a complete digital product experience capable of simplifying complex workflows while maintaining clarity and usability for different user roles.
+                  </p>
+              </div>
+
+              <div>
+                  <strong class="text-primary text-sm block mb-1">UX Approach</strong>
+                  <p class="text-secondary text-sm leading-relaxed">
+                      Led the UX/UI design process including user flows, wireframes, interface design, and branding. Focused on simplifying interactions, building a clear product hierarchy, and delivering a consistent user experience across the platform.
+                  </p>
+              </div>
+
+              <div>
+                  <strong class="text-accent text-sm block mb-1">Outcome</strong>
+                  <p class="text-primary text-sm font-medium leading-relaxed">
+                      The project ranked <strong>2nd place in Digitopia 2025</strong> and was honored by the Egyptian Minister of Communications for its design quality and innovation.
+                  </p>
+              </div>
+
+          </div>
+      </div>
+
+      <div class="order-1 lg:order-2">
+          <div class="relative rounded-xl overflow-hidden border border-border/50">
+
+              <img
+                   src="assets/digitopia.png"
+                   alt="Digitopia 2025 award ceremony"
+                   width="800"
+                   height="450"
+                   loading="lazy"
+                   decoding="async"
+                   class="w-full max-w-none aspect-[4/3] md:aspect-[3/2] object-cover"
+              >
+
+              <div class="absolute top-4 right-4 z-20 hidden md:block">
+                  <div class="px-3 py-1 rounded-full bg-accent text-dark text-xs font-bold shadow-[0_0_15px_rgba(1,232,99,0.5)]">
+                      Digitopia 2025 – 2nd Place
+                  </div>
+              </div>
+
+              <div class="absolute bottom-4 left-4 z-20 hidden md:flex gap-2 flex-wrap">
+                  <span class="px-3 py-1 text-xs rounded-full bg-dark border border-border text-secondary">Product Design</span>
+                  <span class="px-3 py-1 text-xs rounded-full bg-dark border border-border text-secondary">UX/UI Design</span>
+                  <span class="px-3 py-1 text-xs rounded-full bg-dark border border-border text-secondary">Branding</span>
+              </div>
+
+          </div>
+
+          <div class="flex md:hidden mt-4 gap-2 flex-wrap">
+              <span class="px-3 py-1 text-xs rounded-full bg-dark border border-border text-secondary">Product Design</span>
+              <span class="px-3 py-1 text-xs rounded-full bg-dark border border-border text-secondary">UX/UI Design</span>
+              <span class="px-3 py-1 text-xs rounded-full bg-dark border border-border text-secondary">Branding</span>
+          </div>
+
+      </div>
+
+  </div>
+</article>
+<!-- PROJECT CARD END: Digitopia 2025 Graduation Project -->
+          </div>
+        </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section class="py-16 lg:py-24 relative flex justify-center items-center overflow-hidden transform-gpu">
+        <div class="absolute inset-0 bg-grid opacity-10 pointer-events-none z-0"></div>
+        <div class="absolute w-[40vw] h-[40vw] bg-accent/10 rounded-full blur-[60px] pointer-events-none z-0"></div>
+        
+        <div class="max-w-4xl mx-auto px-6 relative z-10 w-full">
+            <div class="spotlight-card glass-card rounded-3xl p-1 lg:p-1 overflow-hidden group">
+                <div class="absolute inset-0 bg-gradient-to-b from-accent/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                
+                <div class="bg-darker/90 backdrop-blur-xl rounded-[23px] p-10 md:p-16 text-center border border-border relative z-10 h-full w-full">
+                    <div class="w-20 h-20 mx-auto bg-dark border border-accent/30 rounded-full flex items-center justify-center mb-8 box-glow">
+                        <svg class="w-10 h-10 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                    </div>
+                    <h2 class="font-display text-4xl md:text-5xl font-bold mb-6 text-primary">Digitopia 2025</h2>
+                    <p class="text-lg md:text-xl text-secondary max-w-2xl mx-auto leading-relaxed">
+                        Graduation project ranked <span class="text-accent text-glow font-medium">second place</span> in Digitopia 2025 and received official recognition from the <span class="text-primary font-medium">Egyptian Minister of Communications</span>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="py-16 lg:py-24 bg-darker relative border-t border-border transform-gpu z-20 overflow-hidden">
+        <div class="absolute inset-0 bg-grid opacity-30 pointer-events-none -z-10"></div>
+        
+        <div class="max-w-5xl mx-auto px-6 relative z-10 text-center">
+            <h2 class="font-display text-5xl md:text-7xl font-bold mb-10 text-primary tracking-tight">
+                Let's build something <br/>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent to-emerald-400">impactful together.</span>
+            </h2>
+            
+            <p class="text-secondary text-lg mb-8 max-w-xl mx-auto">
+                Whether you need to optimize a funnel, redesign a product, or discuss an opportunity, I'm just a click away.
+            </p>
+
+            <div class="flex flex-col items-center gap-2 mb-12">
+                <a href="mailto:mohammedhegazi06@gmail.com" class="text-primary hover:text-accent transition-colors text-lg md:text-xl font-medium tracking-wide">mohammedhegazi06@gmail.com</a>
+                <a href="https://wa.me/201206097481" target="_blank" class="text-secondary hover:text-accent transition-colors text-base font-medium">WhatsApp: 01206097481</a>
+            </div>
+            
+            <div class="flex flex-wrap justify-center items-center gap-4 sm:gap-6">
+                <div class="magnetic-wrap w-full sm:w-auto">
+                    <button class="magnetic-btn group w-full sm:w-auto flex items-center justify-center gap-3 px-8 py-4 bg-accent text-dark font-semibold rounded-full overflow-hidden transition-transform open-contact-btn">
+                        <span class="relative z-10 flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            Send Email
+                        </span>
+                        <div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out"></div>
+                    </button>
+                </div>
+
+                <div class="magnetic-wrap w-full sm:w-auto">
+                    <a href="https://wa.me/201206097481" target="_blank" class="magnetic-btn w-full sm:w-auto flex items-center justify-center gap-3 px-8 py-4 border border-[#25D366] text-primary font-semibold rounded-full hover:bg-[#25D366]/10 hover:border-[#25D366] transition-colors group">
+                        <svg class="w-5 h-5 group-hover:text-[#25D366] transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                        WhatsApp
+                    </a>
+                </div>
+                
+                <div class="magnetic-wrap w-full sm:w-auto">
+                    <a href="https://www.linkedin.com/in/mohamedhokaz/" target="_blank" class="magnetic-btn w-full sm:w-auto flex items-center justify-center gap-3 px-8 py-4 border border-border text-primary font-semibold rounded-full hover:bg-white/5 transition-colors group">
+                        <svg class="w-5 h-5 group-hover:text-[#0077b5] transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        LinkedIn
+                    </a>
+                </div>
+
+                <div class="magnetic-wrap w-full sm:w-auto">
+                    <button class="magnetic-btn w-full sm:w-auto flex items-center justify-center gap-3 px-8 py-4 border border-border text-primary font-semibold rounded-full hover:bg-white/5 transition-colors open-contact-btn">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        Schedule a Call
+                    </button>
+                </div>
+            </div>
+
+            <div class="mt-32 pt-8 border-t border-border/50 flex flex-col md:flex-row items-center justify-between text-secondary text-sm">
+                <p>&copy; 2026 Mohamed Hegazi. All rights reserved.</p>
+                <div class="flex gap-6 mt-4 md:mt-0">
+                    <span class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-accent box-glow"></div> Based in Egypt</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="contact-modal" class="fixed inset-0 z-[100] flex items-center justify-center pointer-events-none opacity-0 transform-gpu">
+        <div class="modal-bg absolute inset-0 bg-darker/80 backdrop-blur-md cursor-pointer transition-opacity"></div>
+        <div class="modal-content relative w-full max-w-lg mx-6 glass-card p-8 md:p-10 rounded-3xl border border-border/80 box-glow shadow-2xl transform-gpu">
+            <button class="absolute top-6 right-6 text-secondary hover:text-accent transition-colors close-contact-btn">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <h3 class="text-3xl font-display font-bold text-primary mb-2">Get in Touch</h3>
+            <p class="text-secondary text-sm mb-8">Schedule a call or send a message directly.</p>
+            
+            <form id="contact-form" class="space-y-4" action="https://formspree.io/f/xnjgbbvl" method="POST">
+                <div>
+                    <label class="block text-xs font-medium text-secondary mb-1.5 uppercase tracking-wider">Name</label>
+                    <input type="text" name="name" required class="w-full bg-dark/50 border border-border rounded-xl px-4 py-3 text-primary focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/50 transition-all placeholder:text-secondary/50" placeholder="Name">
+                </div>
+                <div>
+                    <label class="block text-xs font-medium text-secondary mb-1.5 uppercase tracking-wider">Email</label>
+                    <input type="email" name="email" required class="w-full bg-dark/50 border border-border rounded-xl px-4 py-3 text-primary focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/50 transition-all placeholder:text-secondary/50" placeholder="Email">
+                </div>
+                <div>
+                    <label class="block text-xs font-medium text-secondary mb-1.5 uppercase tracking-wider">Preferred Contact Date</label>
+                    <input type="date" name="date" class="w-full bg-dark/50 border border-border rounded-xl px-4 py-3 text-primary focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/50 transition-all [color-scheme:dark]">
+                </div>
+                <div>
+                    <label class="block text-xs font-medium text-secondary mb-1.5 uppercase tracking-wider">Message</label>
+                    <textarea name="message" required rows="3" class="w-full bg-dark/50 border border-border rounded-xl px-4 py-3 text-primary focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/50 transition-all resize-none placeholder:text-secondary/50" placeholder="Message"></textarea>
+                </div>
+                <div class="flex flex-col sm:flex-row items-center gap-3 pt-4">
+                    <button type="submit" class="w-full bg-accent text-dark font-semibold py-3.5 rounded-xl hover:bg-accent/90 hover:scale-[1.02] transition-all duration-300 transform-gpu">
+                        Send / Schedule
+                    </button>
+                    <button type="button" class="w-full sm:w-auto px-6 py-3.5 border border-border rounded-xl text-primary font-medium hover:bg-white/5 transition-colors close-contact-btn">
+                        Cancel
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="cert-modal" class="fixed inset-0 z-[100] flex items-center justify-center pointer-events-none opacity-0 transform-gpu">
+        <div class="modal-bg absolute inset-0 bg-darker/90 backdrop-blur-md cursor-pointer transition-opacity"></div>
+        <div class="modal-content relative w-full max-w-4xl mx-6 glass-card p-2 rounded-2xl border border-border shadow-2xl flex flex-col transform-gpu">
+            <button class="absolute -top-12 right-0 text-secondary hover:text-white transition-colors close-cert-btn flex items-center gap-2">
+                Close <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <div class="w-full aspect-[1.4/1] bg-dark rounded-xl border border-border overflow-hidden flex items-center justify-center relative">
+                <img src="assets/certificate.png" alt="Certificate Preview" class="w-full h-full object-contain" loading="lazy" decoding="async">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.39/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
