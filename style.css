@@ -6,7 +6,7 @@ html.lenis { height: auto; }
 
 html, body {
     overflow-x: hidden;
-    overflow-y: clip;
+    height: auto;
 }
 
 .bg-grid {
@@ -92,4 +92,8 @@ p {
 
 section + section {
     margin-top: 0.5rem;
+}
+
+#shopify-track{
+    touch-action: pan-y;
 }

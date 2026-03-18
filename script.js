@@ -5,16 +5,10 @@ ScrollTrigger.config({
 });
 
 const lenis = new Lenis({
-    duration: 1.0,
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    direction: 'vertical',
-    gestureDirection: 'vertical',
-    smooth: true,
+    duration: 1,
     smoothWheel: true,
-    mouseMultiplier: 1,
-    smoothTouch: false,
-    touchMultiplier: 2,
-    infinite: false,
+    smoothTouch: true,
+    touchMultiplier: 1.5
 });
 
 // Upgraded GSAP + Lenis rendering loop using requestAnimationFrame directly
@@ -327,29 +321,31 @@ if (shopifyTrack && shopifyPrev && shopifyNext) {
 
     shopifyTrack.addEventListener('scroll', setActiveDot, { passive: true });
 
-    shopifyTrack.addEventListener('mousedown', (event) => {
-        isDragging = true;
-        dragStartX = event.pageX;
-        dragStartScrollLeft = shopifyTrack.scrollLeft;
-        shopifyTrack.classList.add('cursor-grabbing');
-        shopifyTrack.classList.remove('cursor-grab');
-    });
+    if (window.innerWidth > 768) {
+        shopifyTrack.addEventListener('mousedown', (event) => {
+            isDragging = true;
+            dragStartX = event.pageX;
+            dragStartScrollLeft = shopifyTrack.scrollLeft;
+            shopifyTrack.classList.add('cursor-grabbing');
+            shopifyTrack.classList.remove('cursor-grab');
+        });
 
-    shopifyTrack.addEventListener('mousemove', (event) => {
-        if (!isDragging) return;
-        event.preventDefault();
-        const walk = (event.pageX - dragStartX) * 1.2;
-        shopifyTrack.scrollLeft = dragStartScrollLeft - walk;
-    });
+        shopifyTrack.addEventListener('mousemove', (event) => {
+            if (!isDragging) return;
+            event.preventDefault();
+            const walk = (event.pageX - dragStartX) * 1.2;
+            shopifyTrack.scrollLeft = dragStartScrollLeft - walk;
+        });
 
-    const stopDragging = () => {
-        isDragging = false;
-        shopifyTrack.classList.remove('cursor-grabbing');
-        shopifyTrack.classList.add('cursor-grab');
-    };
+        const stopDragging = () => {
+            isDragging = false;
+            shopifyTrack.classList.remove('cursor-grabbing');
+            shopifyTrack.classList.add('cursor-grab');
+        };
 
-    shopifyTrack.addEventListener('mouseup', stopDragging);
-    shopifyTrack.addEventListener('mouseleave', stopDragging);
+        shopifyTrack.addEventListener('mouseup', stopDragging);
+        shopifyTrack.addEventListener('mouseleave', stopDragging);
+    }
 
     setActiveDot();
 }
