@@ -104,10 +104,19 @@ section + section {
 }
 
 #shopify-track{
+    overflow-x: auto;
     overflow-y: visible;
-    padding-top: 10px;
-    touch-action: pan-x;
+    scroll-behavior: smooth;
+    touch-action: pan-x pan-y;
+    overscroll-behavior-x: contain;
+    overscroll-behavior-y: auto;
     -webkit-overflow-scrolling: touch;
+    cursor: grab;
+    padding-top: 10px;
+}
+
+#shopify-track:active{
+    cursor: grabbing;
 }
 
 #education [data-timeline-item]{

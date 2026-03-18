@@ -291,6 +291,12 @@ if (shopifyTrack && shopifyPrev && shopifyNext) {
     });
 
     shopifyTrack.addEventListener('scroll', setActiveDot, { passive: true });
+    shopifyTrack.addEventListener('wheel', (e) => {
+        const isVerticalScroll = Math.abs(e.deltaY) > Math.abs(e.deltaX);
+        if (isVerticalScroll) {
+            return;
+        }
+    }, { passive: true });
 
     const enableDrag = () => {
         shopifyTrack.classList.add('cursor-grab');
