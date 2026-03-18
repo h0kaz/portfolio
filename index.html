@@ -62,8 +62,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W93KSFMD"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-    <div class="fixed top-0 left-1/4 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[60px] pointer-events-none -translate-y-1/2 transform-gpu"></div>
-    <div class="fixed bottom-0 right-1/4 w-[600px] h-[600px] bg-accent/5 rounded-full blur-[60px] pointer-events-none translate-y-1/2 transform-gpu"></div>
+    <div class="fixed top-0 left-1/4 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[40px] pointer-events-none -translate-y-1/2 transform-gpu"></div>
+    <div class="fixed bottom-[-200px] right-1/4 w-[600px] h-[600px] bg-accent/5 rounded-full blur-[40px] pointer-events-none transform-gpu"></div>
 
     <nav class="fixed top-0 w-full z-50 glass-card border-x-0 border-t-0 border-b border-border/50 transform-gpu">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
@@ -74,6 +74,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <a href="#about" class="hover:text-primary transition-colors">About</a>
                 <a href="#expertise" class="hover:text-primary transition-colors">Expertise</a>
                 <a href="#work" class="hover:text-primary transition-colors">Work</a>
+                <a href="#shopify-projects" class="hover:text-accent transition-colors">Shopify Stores</a>
             </div>
             <button class="magnetic-btn px-5 py-2.5 rounded-full border border-border text-sm font-medium hover:bg-white/5 transition-colors duration-300 open-contact-btn shrink-0">
                 Let's Talk
@@ -130,7 +131,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     
                     <div class="relative w-[360px] h-[360px] lg:w-[420px] lg:h-[420px] scale-90 lg:scale-100">
                         <!-- Reduced soft background blur -->
-                        <div class="absolute inset-0 bg-accent/20 rounded-3xl blur-[60px] opacity-60"></div>
+                        <div class="absolute inset-0 bg-accent/20 rounded-3xl blur-[40px] opacity-60"></div>
                         
                         <!-- Profile Image Glass Card -->
                         <div class="relative w-full h-full glass-card rounded-[32px] p-2 border border-accent/30 box-glow overflow-hidden z-10">
@@ -394,7 +395,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         
                         <div>
                             <p class="text-xs text-secondary mb-4">Credential ID: <span class="font-mono text-primary/80">UC-fa4cab2a-cc1f-4bf7-9472-323a8b3715ed</span></p>
-                            <a href="#" target="_blank" class="inline-flex items-center gap-2 text-sm text-primary hover:text-accent transition-colors">
+                            <a href="https://www.udemy.com/certificate/UC-fa4cab2a-cc1f-4bf7-9472-323a8b3715ed/" target="_blank" class="inline-flex items-center gap-2 text-sm text-primary hover:text-accent transition-colors">
                                 View Credential 
                                 <svg class="w-4 h-4 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                             </a>
@@ -824,10 +825,114 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
     </section>
 
+    <section id="shopify-projects" class="py-24 relative">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex items-center justify-between mb-12 gap-6">
+                <div>
+                    <h2 class="font-display text-4xl md:text-5xl font-bold text-primary mb-3">Shopify Stores</h2>
+                    <p class="text-secondary max-w-3xl">Selected Shopify stores I designed and optimized for performance, UX, and conversion rate optimization.</p>
+                </div>
+                <div class="flex items-center gap-3 shrink-0">
+                    <button id="shopify-prev" type="button" aria-label="Scroll left" class="rounded-full border border-border bg-dark w-10 h-10 flex items-center justify-center text-primary hover:border-accent hover:text-accent transition-colors">
+                        <i class="fa-solid fa-chevron-left text-sm"></i>
+                    </button>
+                    <button id="shopify-next" type="button" aria-label="Scroll right" class="rounded-full border border-border bg-dark w-10 h-10 flex items-center justify-center text-primary hover:border-accent hover:text-accent transition-colors">
+                        <i class="fa-solid fa-chevron-right text-sm"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="relative">
+                <div id="shopify-track" class="overflow-x-auto overflow-y-hidden flex gap-8 snap-x snap-mandatory scroll-smooth hide-scrollbar px-1 md:px-2 cursor-grab select-none">
+                    <article data-shopify-card class="flex-shrink-0 w-[85%] md:w-[420px] rounded-2xl border border-border/40 bg-card overflow-hidden transition duration-300 hover:border-accent/40 snap-center">
+                        <img src="assets/shopify/unishop.webp" alt="UniShop store preview" class="w-full aspect-[16/10] object-cover" loading="lazy" decoding="async">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-primary mb-2">UniShop</h3>
+                            <p class="text-secondary text-sm leading-relaxed mb-4">Multi-category Shopify store with optimized navigation, improved product structure, and CRO strategies to increase average order value.</p>
+                            <a href="https://unishopeg.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-accent hover:text-primary transition-colors">
+                                View Store
+                                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article data-shopify-card class="flex-shrink-0 w-[85%] md:w-[420px] rounded-2xl border border-border/40 bg-card overflow-hidden transition duration-300 hover:border-accent/40 snap-center">
+                        <img src="assets/shopify/twinz.webp" alt="Twinz Shop store preview" class="w-full aspect-[16/10] object-cover" loading="lazy" decoding="async">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-primary mb-2">Twinz Shop</h3>
+                            <p class="text-secondary text-sm leading-relaxed mb-4">Fashion Shopify store with clean UI, optimized filters, and fast-loading pages for better shopping experience.</p>
+                            <a href="https://twinz-shop.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-accent hover:text-primary transition-colors">
+                                View Store
+                                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article data-shopify-card class="flex-shrink-0 w-[85%] md:w-[420px] rounded-2xl border border-border/40 bg-card overflow-hidden transition duration-300 hover:border-accent/40 snap-center">
+                        <img src="assets/shopify/daneya.webp" alt="Daneya Store preview" class="w-full aspect-[16/10] object-cover" loading="lazy" decoding="async">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-primary mb-2">Daneya Store</h3>
+                            <p class="text-secondary text-sm leading-relaxed mb-4">Women's fashion Shopify store with elegant layouts and simplified checkout to reduce cart abandonment.</p>
+                            <a href="https://daneya.shop/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-accent hover:text-primary transition-colors">
+                                View Store
+                                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article data-shopify-card class="flex-shrink-0 w-[85%] md:w-[420px] rounded-2xl border border-border/40 bg-card overflow-hidden transition duration-300 hover:border-accent/40 snap-center">
+                        <img src="assets/shopify/premium-protein.webp" alt="Premium Protein store preview" class="w-full aspect-[16/10] object-cover" loading="lazy" decoding="async">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-primary mb-2">Premium Protein</h3>
+                            <p class="text-secondary text-sm leading-relaxed mb-4">Supplements Shopify store with strong trust elements and CRO improvements to increase sales performance.</p>
+                            <a href="https://dkmira-iw.myshopify.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-accent hover:text-primary transition-colors">
+                                View Store
+                                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article data-shopify-card class="flex-shrink-0 w-[85%] md:w-[420px] rounded-2xl border border-border/40 bg-card overflow-hidden transition duration-300 hover:border-accent/40 snap-center">
+                        <img src="assets/shopify/khadija.webp" alt="Khadija Store preview" class="w-full aspect-[16/10] object-cover" loading="lazy" decoding="async">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-primary mb-2">Khadija Store</h3>
+                            <p class="text-secondary text-sm leading-relaxed mb-4">Modest fashion Shopify store with clean product presentation and improved browsing experience.</p>
+                            <a href="https://khadigastore.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-accent hover:text-primary transition-colors">
+                                View Store
+                                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+
+                <div id="shopify-dots" class="flex justify-center gap-2 mt-8">
+                    <button type="button" aria-label="Go to slide 1" class="shopify-dot w-2.5 h-2.5 rounded-full bg-accent"></button>
+                    <button type="button" aria-label="Go to slide 2" class="shopify-dot w-2.5 h-2.5 rounded-full bg-border"></button>
+                    <button type="button" aria-label="Go to slide 3" class="shopify-dot w-2.5 h-2.5 rounded-full bg-border"></button>
+                    <button type="button" aria-label="Go to slide 4" class="shopify-dot w-2.5 h-2.5 rounded-full bg-border"></button>
+                    <button type="button" aria-label="Go to slide 5" class="shopify-dot w-2.5 h-2.5 rounded-full bg-border"></button>
+                </div>
+            </div>
+
+            <div class="mt-10 text-center rounded-2xl border border-border/40 bg-card p-8">
+                <h3 class="text-2xl font-display font-bold text-primary mb-3">Need a high-converting Shopify store?</h3>
+                <p class="text-secondary max-w-2xl mx-auto">I design and optimize Shopify stores focused on performance, user experience, and conversion growth.</p>
+                <a href="#contact" class="mt-10 inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-accent text-dark font-semibold hover:scale-105 transition">
+                    Start Your Shopify Store
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <a href="https://wa.me/201206097481" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center shadow-lg hover:scale-110 transition">
+        <i class="fa-brands fa-whatsapp text-white text-2xl"></i>
+    </a>
+
     <!-- Awards Section -->
     <section class="py-16 lg:py-24 relative flex justify-center items-center overflow-hidden transform-gpu">
         <div class="absolute inset-0 bg-grid opacity-10 pointer-events-none z-0"></div>
-        <div class="absolute w-[40vw] h-[40vw] bg-accent/10 rounded-full blur-[60px] pointer-events-none z-0"></div>
+        <div class="absolute w-[40vw] h-[40vw] bg-accent/10 rounded-full blur-[40px] pointer-events-none z-0"></div>
         
         <div class="max-w-4xl mx-auto px-6 relative z-10 w-full">
             <div class="spotlight-card glass-card rounded-3xl p-1 lg:p-1 overflow-hidden group">
@@ -846,7 +951,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
     </section>
 
-    <footer id="contact" class="py-16 lg:py-24 bg-darker relative border-t border-border transform-gpu z-20 overflow-hidden">
+    <footer id="contact" class="py-16 lg:py-24 bg-darker relative border-t border-border z-20 overflow-hidden">
         <div class="absolute inset-0 bg-grid opacity-30 pointer-events-none -z-10"></div>
         
         <div class="max-w-5xl mx-auto px-6 relative z-10 text-center">
@@ -906,7 +1011,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
     </footer>
 
-    <div id="contact-modal" class="fixed inset-0 z-[100] flex items-center justify-center pointer-events-none opacity-0 transform-gpu">
+    <div id="contact-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center pointer-events-none opacity-0 transform-gpu">
         <div class="modal-bg absolute inset-0 bg-darker/80 backdrop-blur-md cursor-pointer transition-opacity"></div>
         <div class="modal-content relative w-full max-w-lg mx-6 glass-card p-8 md:p-10 rounded-3xl border border-border/80 box-glow shadow-2xl transform-gpu">
             <button class="absolute top-6 right-6 text-secondary hover:text-accent transition-colors close-contact-btn">
@@ -944,7 +1049,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
     </div>
 
-    <div id="cert-modal" class="fixed inset-0 z-[100] flex items-center justify-center pointer-events-none opacity-0 transform-gpu">
+    <div id="cert-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center pointer-events-none opacity-0 transform-gpu">
         <div class="modal-bg absolute inset-0 bg-darker/90 backdrop-blur-md cursor-pointer transition-opacity"></div>
         <div class="modal-content relative w-full max-w-4xl mx-6 glass-card p-2 rounded-2xl border border-border shadow-2xl flex flex-col transform-gpu">
             <button class="absolute -top-12 right-0 text-secondary hover:text-white transition-colors close-cert-btn flex items-center gap-2">

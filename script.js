@@ -25,6 +25,7 @@ function raf(time) {
     requestAnimationFrame(raf);
 }
 requestAnimationFrame(raf);
+ScrollTrigger.refresh();
 
 // Cache frequent selectors
 const magneticWraps = document.querySelectorAll('.magnetic-wrap');
@@ -229,6 +230,7 @@ const setupModal = (modalId, openSelectors, closeSelectors) => {
         e.preventDefault();
         lenis.stop();
         document.body.style.overflow = 'hidden';
+        modal.classList.remove('hidden');
         modal.classList.remove('pointer-events-none');
 
         gsap.to(modal, { opacity: 1, duration: 0.3, ease: 'power2.out' });
@@ -247,7 +249,10 @@ const setupModal = (modalId, openSelectors, closeSelectors) => {
             opacity: 0, 
             duration: 0.3, 
             ease: 'power2.in',
-            onComplete: () => modal.classList.add('pointer-events-none')
+            onComplete: () => {
+                modal.classList.add('pointer-events-none');
+                modal.classList.add('hidden');
+            }
         });
         gsap.to(content, { scale: 0.95, duration: 0.3, ease: 'power2.in' });
     };
@@ -261,3 +266,85 @@ const setupModal = (modalId, openSelectors, closeSelectors) => {
 
 const closeContactFunc = setupModal('contact-modal', '.open-contact-btn', '.close-contact-btn');
 setupModal('cert-modal', '.open-cert-preview', '.close-cert-btn');
+
+const shopifyTrack = document.getElementById('shopify-track');
+const shopifyPrev = document.getElementById('shopify-prev');
+const shopifyNext = document.getElementById('shopify-next');
+const shopifyDots = document.querySelectorAll('.shopify-dot');
+
+if (shopifyTrack && shopifyPrev && shopifyNext) {
+    const shopifyCards = Array.from(shopifyTrack.querySelectorAll('[data-shopify-card]'));
+    let isDragging = false;
+    let dragStartX = 0;
+    let dragStartScrollLeft = 0;
+
+    const getScrollAmount = () => Math.min(460, Math.max(260, shopifyTrack.clientWidth * 0.85));
+
+    const setActiveDot = () => {
+        if (!shopifyCards.length || !shopifyDots.length) return;
+        const centerPoint = shopifyTrack.scrollLeft + (shopifyTrack.clientWidth / 2);
+        let closestIndex = 0;
+        let closestDistance = Infinity;
+
+        shopifyCards.forEach((card, idx) => {
+            const cardCenter = card.offsetLeft + (card.offsetWidth / 2);
+            const distance = Math.abs(cardCenter - centerPoint);
+            if (distance < closestDistance) {
+                closestDistance = distance;
+                closestIndex = idx;
+            }
+        });
+
+        shopifyDots.forEach((dot, idx) => {
+            dot.classList.toggle('bg-accent', idx === closestIndex);
+            dot.classList.toggle('bg-border', idx !== closestIndex);
+        });
+    };
+
+    const scrollToCard = (index) => {
+        const card = shopifyCards[index];
+        if (!card) return;
+        const left = card.offsetLeft - ((shopifyTrack.clientWidth - card.offsetWidth) / 2);
+        shopifyTrack.scrollTo({ left, behavior: 'smooth' });
+    };
+
+    shopifyPrev.addEventListener('click', () => {
+        shopifyTrack.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+    });
+
+    shopifyNext.addEventListener('click', () => {
+        shopifyTrack.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+    });
+
+    shopifyDots.forEach((dot, idx) => {
+        dot.addEventListener('click', () => scrollToCard(idx));
+    });
+
+    shopifyTrack.addEventListener('scroll', setActiveDot, { passive: true });
+
+    shopifyTrack.addEventListener('mousedown', (event) => {
+        isDragging = true;
+        dragStartX = event.pageX;
+        dragStartScrollLeft = shopifyTrack.scrollLeft;
+        shopifyTrack.classList.add('cursor-grabbing');
+        shopifyTrack.classList.remove('cursor-grab');
+    });
+
+    shopifyTrack.addEventListener('mousemove', (event) => {
+        if (!isDragging) return;
+        event.preventDefault();
+        const walk = (event.pageX - dragStartX) * 1.2;
+        shopifyTrack.scrollLeft = dragStartScrollLeft - walk;
+    });
+
+    const stopDragging = () => {
+        isDragging = false;
+        shopifyTrack.classList.remove('cursor-grabbing');
+        shopifyTrack.classList.add('cursor-grab');
+    };
+
+    shopifyTrack.addEventListener('mouseup', stopDragging);
+    shopifyTrack.addEventListener('mouseleave', stopDragging);
+
+    setActiveDot();
+}
