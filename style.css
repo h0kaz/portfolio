@@ -110,6 +110,11 @@ section + section {
     -webkit-overflow-scrolling: touch;
 }
 
+#education [data-timeline-item]{
+    opacity: 1 !important;
+    transform: none !important;
+}
+
 @media (max-width: 768px){
     [data-timeline-item]{
         padding-left: 60px;

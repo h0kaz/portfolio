@@ -166,33 +166,6 @@ gsap.from('.cert-card', {
     ease: "power3.out"
 });
 
-// Education Section Animation
-ScrollTrigger.batch('.edu-item', {
-    start: "top 85%",
-    once: true,
-    onEnter: (batch) => gsap.from(batch, {
-        y: 40,
-        opacity: 0,
-        duration: 0.8,
-        ease: "power3.out",
-        stagger: 0.1,
-        overwrite: true
-    })
-});
-
-gsap.utils.toArray('[data-timeline-item]').forEach((item) => {
-    gsap.from(item, {
-        scrollTrigger: {
-            trigger: item,
-            start: "top 80%",
-        },
-        y: 30,
-        opacity: 0,
-        duration: 1,
-        ease: "power3.out"
-    });
-});
-
 counters.forEach(counter => {
     ScrollTrigger.create({
         trigger: counter,

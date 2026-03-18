@@ -459,15 +459,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <h2 class="font-display text-4xl md:text-5xl font-bold text-center text-primary timeline-header">Education</h2>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 relative space-y-12 md:space-y-0">
-                <div class="absolute top-0 bottom-0 w-[1px] bg-border/70 left-[20px] md:left-1/2 md:-translate-x-1/2"></div>
+            <div class="relative flex flex-col items-center gap-12">
+                <div class="absolute top-0 bottom-0 w-[1px] bg-border/70 left-1/2 -translate-x-1/2"></div>
                 
-                <div class="relative pl-16 md:pl-0 edu-item group md:col-span-1" data-timeline-item>
-                    <div class="absolute left-[8px] md:left-1/2 md:-translate-x-1/2 top-0 w-10 h-10 glass-card rounded-xl border border-border flex items-center justify-center z-10 overflow-hidden box-glow bg-dark group-hover:border-accent transition-colors duration-300">
-                        <img src="assets/sha-logo.jpg" alt="El Shorouk Academy Logo" width="20" height="20" loading="lazy" decoding="async" class="object-contain">
-                    </div>
-                    <div class="md:w-1/2 md:pr-16 text-left md:text-right md:ml-0 max-w-xl">
-                        <span class="text-accent font-display font-bold text-xl mb-1 block">Oct 2021 &ndash; Oct 2025</span>
+                <div class="relative max-w-xl mx-auto text-center edu-item group">
+                    <div class="max-w-lg mx-auto text-center">
+                        <div class="relative flex flex-col items-center gap-2 mb-3 pt-6">
+                            <div class="absolute -top-6 w-10 h-10 flex items-center justify-center rounded-xl border border-border bg-dark shadow-lg overflow-hidden box-glow group-hover:border-accent transition-colors duration-300">
+                                <img src="assets/sha-logo.jpg" alt="El Shorouk Academy Logo" width="20" height="20" loading="lazy" decoding="async" class="w-5 h-5 object-contain">
+                            </div>
+                            <span class="text-accent font-display font-bold text-xl">Oct 2021 &ndash; Oct 2025</span>
+                        </div>
                         <span class="text-secondary text-sm font-medium mb-2 block uppercase tracking-wider">El Shorouk Academy</span>
                         <h3 class="text-2xl font-bold text-primary mb-3">Bachelor of Computer Science - Computer and Information Sciences</h3>
                         <p class="text-secondary text-sm leading-relaxed mb-4">
