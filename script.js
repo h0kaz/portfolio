@@ -180,13 +180,13 @@ ScrollTrigger.batch('.edu-item', {
     })
 });
 
-gsap.utils.toArray('.timeline-item').forEach((item) => {
+gsap.utils.toArray('[data-timeline-item]').forEach((item) => {
     gsap.from(item, {
         scrollTrigger: {
             trigger: item,
             start: "top 80%",
         },
-        x: item.classList.contains('md:pl-16') ? 50 : -50,
+        y: 30,
         opacity: 0,
         duration: 1,
         ease: "power3.out"
@@ -273,11 +273,9 @@ const shopifyDots = document.querySelectorAll('.shopify-dot');
 
 if (shopifyTrack && shopifyPrev && shopifyNext) {
     const shopifyCards = Array.from(shopifyTrack.querySelectorAll('[data-shopify-card]'));
-    let isDragging = false;
-    let dragStartX = 0;
-    let dragStartScrollLeft = 0;
-
-    const getScrollAmount = () => Math.min(460, Math.max(260, shopifyTrack.clientWidth * 0.85));
+    let isDown = false;
+    let startX = 0;
+    let scrollLeft = 0;
 
     const setActiveDot = () => {
         if (!shopifyCards.length || !shopifyDots.length) return;
@@ -308,11 +306,11 @@ if (shopifyTrack && shopifyPrev && shopifyNext) {
     };
 
     shopifyPrev.addEventListener('click', () => {
-        shopifyTrack.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+        shopifyTrack.scrollBy({ left: -420, behavior: 'smooth' });
     });
 
     shopifyNext.addEventListener('click', () => {
-        shopifyTrack.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+        shopifyTrack.scrollBy({ left: 420, behavior: 'smooth' });
     });
 
     shopifyDots.forEach((dot, idx) => {
@@ -321,30 +319,40 @@ if (shopifyTrack && shopifyPrev && shopifyNext) {
 
     shopifyTrack.addEventListener('scroll', setActiveDot, { passive: true });
 
-    if (window.innerWidth > 768) {
-        shopifyTrack.addEventListener('mousedown', (event) => {
-            isDragging = true;
-            dragStartX = event.pageX;
-            dragStartScrollLeft = shopifyTrack.scrollLeft;
+    const enableDrag = () => {
+        shopifyTrack.classList.add('cursor-grab');
+
+        shopifyTrack.addEventListener('mousedown', (e) => {
+            isDown = true;
+            startX = e.pageX - shopifyTrack.offsetLeft;
+            scrollLeft = shopifyTrack.scrollLeft;
             shopifyTrack.classList.add('cursor-grabbing');
             shopifyTrack.classList.remove('cursor-grab');
         });
 
-        shopifyTrack.addEventListener('mousemove', (event) => {
-            if (!isDragging) return;
-            event.preventDefault();
-            const walk = (event.pageX - dragStartX) * 1.2;
-            shopifyTrack.scrollLeft = dragStartScrollLeft - walk;
-        });
-
-        const stopDragging = () => {
-            isDragging = false;
+        shopifyTrack.addEventListener('mouseleave', () => {
+            isDown = false;
             shopifyTrack.classList.remove('cursor-grabbing');
             shopifyTrack.classList.add('cursor-grab');
-        };
+        });
 
-        shopifyTrack.addEventListener('mouseup', stopDragging);
-        shopifyTrack.addEventListener('mouseleave', stopDragging);
+        shopifyTrack.addEventListener('mouseup', () => {
+            isDown = false;
+            shopifyTrack.classList.remove('cursor-grabbing');
+            shopifyTrack.classList.add('cursor-grab');
+        });
+
+        shopifyTrack.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - shopifyTrack.offsetLeft;
+            const walk = (x - startX) * 1.3;
+            shopifyTrack.scrollLeft = scrollLeft - walk;
+        });
+    };
+
+    if (window.innerWidth > 768) {
+        enableDrag();
     }
 
     setActiveDot();

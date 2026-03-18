@@ -82,6 +82,15 @@ html, body {
     transform: translateY(-4px);
 }
 
+[data-shopify-card]{
+    position: relative;
+    will-change: transform;
+}
+
+[data-shopify-card]:hover{
+    transform: translateY(-6px);
+}
+
 .font-display {
     letter-spacing: -0.02em;
 }
@@ -95,5 +104,18 @@ section + section {
 }
 
 #shopify-track{
-    touch-action: pan-y;
+    overflow-y: visible;
+    padding-top: 10px;
+    touch-action: pan-x;
+    -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 768px){
+    [data-timeline-item]{
+        padding-left: 60px;
+    }
+
+    [data-timeline-item] > div:first-child{
+        left: 0;
+    }
 }
