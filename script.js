@@ -35,15 +35,20 @@ const counters = document.querySelectorAll('.counter');
 magneticWraps.forEach(wrap => {
     const btn = wrap.querySelector('.magnetic-btn');
     if (!btn) return;
+    const inFooter = !!wrap.closest('footer#contact');
+    const isPrimaryFooterCta = btn.classList.contains('magnetic-primary');
+    if (inFooter && !isPrimaryFooterCta) return;
+
+    const maxMove = 12;
     const xTo = gsap.quickTo(btn, "x", { duration: 0.4, ease: "power2.out" });
     const yTo = gsap.quickTo(btn, "y", { duration: 0.4, ease: "power2.out" });
 
     wrap.addEventListener('mousemove', (e) => {
         const rect = wrap.getBoundingClientRect();
-        const x = e.clientX - rect.left - rect.width / 2;
-        const y = e.clientY - rect.top - rect.height / 2;
-        xTo(x * 0.3);
-        yTo(y * 0.3);
+        const x = (e.clientX - rect.left - rect.width / 2) / rect.width;
+        const y = (e.clientY - rect.top - rect.height / 2) / rect.height;
+        xTo(x * maxMove);
+        yTo(y * maxMove);
     });
 
     wrap.addEventListener('mouseleave', () => {
